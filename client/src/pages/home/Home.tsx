@@ -1,9 +1,9 @@
 import React, { useState, MouseEventHandler, Fragment } from 'react'
 
-import RightNavbar from '../navbar/RightNavbar';
-import HomePageRight from '../HomePageRight/HomePageRight';
-import HomePageLeft from '../homePageLeft/HomePageLeft';
-import LeftNavbar from '../navbar/LeftNavbar';
+import RightNavbar from '../../components/navRight/RightNavbar';
+import HomePageRight from '../../components/HomePageRight/HomePageRight';
+import HomePageLeft from '../../components/homePageLeft/HomePageLeft';
+import LeftNavbar from '../../components/navLeft/LeftNavbar';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +13,7 @@ export interface MyProps {
 }
 const Home = () => {
 
-    const [showNavBar, setShowNavBar] =useState({navbar:'fade-out',homePage:'fade-in'})
+    const [showNavBar, setShowNavBar] =useState({navbar:'initial-render',homePage:'fade-in'})
     
     
     const handleNav = () => {
@@ -26,6 +26,7 @@ const Home = () => {
         setShowNavBar({...showNavBar,navbar:'fade-out',homePage:'fade-in'})
     } 
     return <>
+    <div className='home'>
         <div className={showNavBar.homePage}>
             <div className='a'>
                 <div className="container">
@@ -42,7 +43,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-
+        </div>
     </>
 }
 

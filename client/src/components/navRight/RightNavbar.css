@@ -16,5 +16,10 @@ li {
 .navlist{
     position:relative;
     left:60%;
-    top:18vh;
+    top:25vh;
+}
+@media(max-width:600px){
+    .navlist{
+        left:20%;
+    }
 }

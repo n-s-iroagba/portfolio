@@ -13,7 +13,9 @@
 
 @media(max-width:600px){
 .right-wrapper{
-  height:85vh
+  height:60vw;
+  top:15vw;
+  position:relative
 }
 }
 
@@ -32,4 +34,12 @@
   to {
     opacity: 0;
   }
+}
+@media(max-width:600px){
+  .nav-button{
+    position:relative;
+    right:40vw;
+    bottom:108vw;
+  }
+  
 }

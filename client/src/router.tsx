@@ -1,10 +1,12 @@
 import React from 'react'
-import Home from './components/home/Home'
+import Home from './pages/home/Home'
 import {createBrowserRouter} from "react-router-dom"
 import HomePageRight from './components/HomePageRight/HomePageRight'
 import HomePageLeft from './components/homePageLeft/HomePageLeft'
-import RightNavbar from './components/navbar/RightNavbar'
-import LeftNavbar from './components/navbar/LeftNavbar'
+import RightNavbar from './components/navRight/RightNavbar'
+import LeftNavbar from './components/navLeft/LeftNavbar'
+import Portfolio from './components/portolio/Portfolio'
+import PortfolioPage from './pages/porfolio/PortfolioPage'
 export const router = createBrowserRouter([
     {
     path:'/',
@@ -21,5 +23,10 @@ export const router = createBrowserRouter([
 {
     path:'leftnav',
     element:<LeftNavbar/>
+}
+,
+{
+    path:'portfolio',
+    element:<PortfolioPage/>
 }
 ])

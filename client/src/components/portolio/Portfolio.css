@@ -1,0 +1,28 @@
+.initial-state{
+    display:none
+}
+.rotat {
+    animation:reverse;
+    transform: rotate(180deg);
+    transition: transform 0.3s ;
+}
+.icons {
+    
+    float:inline-end;
+    display:relative;
+    left: 70px;
+    
+}
+.title {
+    display:inline-block;
+    
+}
+.title-wrapper {
+    margin:5vw;
+    position:relative;
+    top:5vw;
+}
+.project-description-wrapper{
+    display:flex
+}
+
