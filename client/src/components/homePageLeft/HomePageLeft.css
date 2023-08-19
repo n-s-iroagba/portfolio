@@ -1,0 +1,13 @@
+
+.home-image{
+    width:50vw;
+    height:90vh;
+    border: 1px solid red;
+}
+@media(max-width:600px){
+    .home-image{
+        width:100vw;
+        height: 100vh;
+
+    }
+}

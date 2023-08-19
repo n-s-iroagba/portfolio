@@ -1,0 +1,35 @@
+.right-wrapper{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: space-around;
+  background-color: aqua;
+  height: 90vh;
+}
+
+.nav-button{
+  margin: 7vh;
+}
+
+@media(max-width:600px){
+.right-wrapper{
+  height:85vh
+}
+}
+
+.fade-out{
+  opacity:0;
+  width:0;
+  height:0;
+  animation: disappear 1s ease;
+
+}
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

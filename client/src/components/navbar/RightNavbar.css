@@ -1,0 +1,20 @@
+li {
+    display:block;
+    padding-bottom: 2vh;
+    
+}
+.navlist-wrapper {
+    position: relative;
+    left: 57%;
+    width:50vw;
+    margin-top: 0%;
+    height: 90vh;
+
+   
+    background-color:  blue;
+}
+.navlist{
+    position:relative;
+    left:60%;
+    top:18vh;
+}
