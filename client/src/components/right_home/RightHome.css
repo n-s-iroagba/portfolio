@@ -1,0 +1,19 @@
+
+.image-wrapper{
+    width:50vw;
+    height:100vh;
+    
+}
+@media(max-width:600px){
+    .home-image{
+        width:90vw;
+        height:73vw;
+        
+    }
+    .image-wrapper{
+        width:100vw;
+        height:350px;
+        border: 1px solid green;
+              
+    }
+}

@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Portfolio from '../../components/portolio/Portfolio'
+import { useSelector } from 'react-redux'
 const PortfolioPage = ()=>{
+   const projects = useSelector((state:any)=> state.projects)
    
- const projects =[ {id:1,title:'my first project',github:"https://github.com/n-s-iroagba/takum",writeUp:'blah blah blah',link:"https://www.xnxx.com"}]
- return <>{projects.map(project=>{
+
+ 
+ return <>{projects.map((project: { id: any })=>{
     return <Portfolio key = {project.id} project={project}/>
  })}</>
 }

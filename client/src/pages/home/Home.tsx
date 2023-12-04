@@ -1,49 +1,42 @@
-import React, { useState, MouseEventHandler, Fragment } from 'react'
+import React from 'react'
 
-import RightNavbar from '../../components/navRight/RightNavbar';
-import HomePageRight from '../../components/HomePageRight/HomePageRight';
-import HomePageLeft from '../../components/homePageLeft/HomePageLeft';
-import LeftNavbar from '../../components/navLeft/LeftNavbar';
-import { Button, Col, Container, Row } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import RightNavbar from '../../components/right_nav/RightNavbar';
+import HomePageRight from '../../components/left_home/LeftHome';
+import HomePageLeft from '../../components/right_home/RightHome';
+import LeftNavbar from '../../components/left_nav/LeftNavbar';
 import './Home.css'
-export interface MyProps {
-    showNav: () => void | MouseEventHandler<HTMLDivElement>
-}
-const Home = () => {
+import { useSelector } from 'react-redux';
+import Footer from '../../components/footer/Footer';
+import NavButton from '../../components/nav_button/NavButton';
+import LeftHome from '../../components/left_home/LeftHome';
+import RightHome from '../../components/right_home/RightHome';
+import HomeButton from '../../components/nav_button/HomeButton';
 
-    const [showNavBar, setShowNavBar] =useState({navbar:'initial-render',homePage:'fade-in'})
-    
-    
-    const handleNav = () => {
-        
-        setShowNavBar({...showNavBar,navbar:'fade-in',homePage:'fade-out'})
-        console.log(showNavBar)
-   
-    }
-    const handleHomeChange =()=>{
-        setShowNavBar({...showNavBar,navbar:'fade-out',homePage:'fade-in'})
-    } 
+const Home = () => {
+    const homeState = useSelector((state: any) => state.homeOrNav)
+
     return <>
-    <div className='home'>
-        <div className={showNavBar.homePage}>
-            <div className='a'>
-                <div className="container">
-                    <div className="left"><HomePageLeft /></div>
-                    <div className='right'><HomePageRight handleNav={handleNav} /></div>
+        <div className='c'>
+            <div className={homeState.home}>
+                <div className="nav-button">{homeState.home == 'fade-in' ? <NavButton /> : < HomeButton />}</div>
+                <div>
+                    <div className="container">
+                        <div className="left"><LeftHome /></div>
+                        <div className='right'><RightHome /></div>
+
+                    </div>
+
                 </div>
             </div>
-        </div>
-        <div className={showNavBar.navbar}>
-            <div className='b'>
-                <div className="nav-container">
-                    <div className="left">< LeftNavbar handleHomeChange={handleHomeChange}/></div>
-                    <div className='right'><RightNavbar /></div>
-                </div>
+
+            <div className={homeState.navbar}>
+                <div className="nav-button">{homeState.home == 'fade-in' ? <NavButton /> : < HomeButton />}</div>
+                <div className='nav'><RightNavbar /></div>
+
             </div>
+            <div className='foote'><Footer /></div>
         </div>
-        </div>
+
     </>
 }
 

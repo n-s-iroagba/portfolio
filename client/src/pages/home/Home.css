@@ -1,19 +1,15 @@
-.fade-out{
-    animation: disappear 2s ease;
-  }
-  @keyframes disappear {
-    from {
-      opacity: 1;
-    }
-  
-    to {
-      opacity: 0;
-    }
+@keyframes disappear {
+  from {
+    opacity: 1;
   }
 
-.fade-in{
-  animation: appear 2s ease;
+  to {
+    opacity: 0;
+  }
 }
+
+
+
 @keyframes appear {
   from {
     opacity: 0;
@@ -24,43 +20,70 @@
   }
 }
 
+.fade-out {
+  animation: disappear 2s ease;
+  display: none
+}
 
-  
-  
+.fade-in {
+ animation: appear 2s ease;
+ height: 90vh;
+ 
+background-color: aqua;
+
+}
+
 .container {
-    padding:0%;
-    margin: 0%;
-    display: flex;
-    border: 1px solid yellowgreen;
-    width:100vw;
-}
-.nav-container {
-  padding:0%;
-  margin: 0%;
   display: flex;
-  border: 1px solid yellowgreen;
-  width:100vw;
-  height:90vh;
-}
-.right {
-    flex-grow: 1;
-}
-.initial-render{
-  display:none;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  
 }
 
 
-@media(max-width:600px){
-    .container{
-        flex-direction: column;
-        height:200vh   
-    }
-    .nav-container{
-      max-width:100vw;
-    }
-    .home {
-      height: 200vh;
-     
-    }
+.nav{
+  height: 74vh;
+}
+.initial-render {
+  display: none;
 }
 
+
+@media(max-width:600px) {
+  .fade-in {
+    height: 540px;
+    
+  }
+  
+  .container {
+    flex-direction: column-reverse;
+    display:relative;
+    height: 680px;
+    background-color: brown;
+    
+  }
+  .right{
+    margin-top: 20px;
+    height:400px
+  }
+  .nav{
+    height: 500px;
+  
+  }
+  .footer{
+   position:absolute;
+    bottom: 0%;
+    background-color: aqua;
+    width:100vw;
+  }
+  .c{
+    height: 800px;
+    position: relative;
+    background-color: black;
+  }
+  
+}
+  
+  

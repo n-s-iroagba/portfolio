@@ -1,0 +1,12 @@
+.gohome-button{
+    
+}
+.leftnav{
+    height:90vh;
+    width:50vw;  
+}
+@media(max-width:600px){
+    .leftnav{
+       width :50vw;
+    }
+}

@@ -1,0 +1,19 @@
+.nav-button{
+  
+    padding-top: 2vh;
+    padding-left: 2vW;
+ 
+    
+    
+    
+  }
+  @media(max-width:600px){
+    .nav-button{
+       
+        padding-top: 15px;
+        padding-left: 10px;
+        
+        
+        
+      }
+  }

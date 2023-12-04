@@ -4,15 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import Description from './Description'
 import ProjectImage from './ProjectImage'
-const Portfolio = ({project}:any)=>{
-const [projectDescription, setProjectDescription] =useState('initial-state')
-const [rotate, setRotate] = useState(' ')
-const show=()=>{
-    setProjectDescription('show-state')
-    setRotate('rotat')
-    
-}
-    return(
+const Portfolio = ({project} : any) => {
+    const [projectDescription, setProjectDescription] = useState('initial-state')
+    const [rotate, setRotate] = useState(' ')
+    const show = () => {
+        setProjectDescription('show-state')
+        setRotate('rotat')
+    }
+    return (
         <div>
             <div className='title-wrapper'>
 
@@ -21,8 +20,8 @@ const show=()=>{
                 <hr />
                 <div className={projectDescription}>
                     <div className='project-description-wrapper'>
-                        <Description project={project}/>
-                        <ProjectImage/>
+                        <div className='a'><Description project={project} /></div>
+                        <div className='b'><ProjectImage /></div>
                     </div>
                     <hr />
                 </div>
